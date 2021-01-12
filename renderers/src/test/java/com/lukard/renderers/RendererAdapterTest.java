@@ -20,7 +20,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.pedrovgs.renderers.BuildConfig;
 import com.lukard.renderers.exception.NullRendererBuiltException;
 
 import org.junit.Before;

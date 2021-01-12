@@ -17,7 +17,6 @@ package com.lukard.renderers;
 
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -316,7 +315,7 @@ public class RendererAdapter<T> extends RecyclerView.Adapter<RendererViewHolder>
 
     /**
      * @see List#removeAll(Collection)
-     * @see Adapter#notifyDataSetChanged()
+     * @see RecyclerView.Adapter#notifyDataSetChanged()
      */
     public boolean removeAllAndNotify(Collection<?> elements) {
         boolean result = removeAll(elements);
@@ -333,7 +332,7 @@ public class RendererAdapter<T> extends RecyclerView.Adapter<RendererViewHolder>
 
     /**
      * @see List#clear()
-     * @see Adapter#notifyDataSetChanged()
+     * @see RecyclerView.Adapter#notifyDataSetChanged()
      */
     public void clearAndNotify() {
         clear();

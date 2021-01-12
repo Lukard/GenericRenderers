@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.pedrovgs.renderers.BuildConfig;
 import com.lukard.renderers.ViewRenderer.InflateFunction;
 import com.lukard.renderers.ViewRenderer.RenderFunction;
 

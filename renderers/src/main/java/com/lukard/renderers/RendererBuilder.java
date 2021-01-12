@@ -37,11 +37,11 @@ import java.util.Map;
 /**
  * Class created to work as builder for Renderer objects. This class provides methods to create a
  * Renderer instances using a fluent API.
- * <p/>
+ * <p>
  * The library users have to extends RendererBuilder and create a new one with prototypes. The
  * RendererBuilder implementation will have to declare the mapping between objects from the
  * List and Renderer instances passed to the prototypes collection.
- * <p/>
+ * <p>
  * This class is not going to implement the view recycling if is used with the RecyclerView widget
  * because RecyclerView class already implements the view recycling for us.
  *
@@ -157,7 +157,7 @@ public class RendererBuilder<T> {
      * create a new Renderer instance with all the needed information to implement the rendering.
      * This method will validate all the attributes passed in the builder constructor and will create
      * a RendererViewHolder instance.
-     * <p/>
+     * <p>
      * This method is used with RecyclerView because the view recycling mechanism is implemented out
      * of this class and we only have to return new RendererViewHolder instances.
      *
