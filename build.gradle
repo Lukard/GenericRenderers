@@ -1,40 +1,35 @@
 buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.2'
-    }
+  repositories {
+    mavenCentral()
+    jcenter()
+    google()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.6.3'
+    classpath 'com.github.pedrovgs:kuronometer:0.1.1'
+  }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
+  repositories {
+    mavenCentral()
+    jcenter()
+    google()
+  }
 
-    apply plugin: 'checkstyle'
+  apply plugin: 'checkstyle'
 
-    task checkstyle(type: Checkstyle) {
-        configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
-        source 'src'
-        include '**/*.java'
-        exclude '**/gen/**'
+  task checkstyle(type: Checkstyle) {
+    configFile file("${project.rootDir}/config/checkstyle.xml")
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
 
-        classpath = files()
-        configProperties = [
-                'proj.module.dir'      : projectDir.absolutePath,
-                'checkstyle.cache.file': './build/cache/checkstyle-cache'
-        ]
-    }
-
-    tasks.withType(Javadoc) {
-        failOnError false
-    }
+    classpath = files()
+  }
 }
 
 task clean(type: Delete) {
-    delete rootProject.buildDir
+  delete rootProject.buildDir
 }
+

@@ -37,4 +37,9 @@
       android:id="@+id/tv_title"
       style="@style/AppTheme.Video.Title"/>
 
+
+  <TextView
+      android:id="@+id/date"
+      style="@style/AppTheme.Video.Date"/>
+
 </RelativeLayout>
